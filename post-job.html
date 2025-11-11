@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireHub - Post a Job</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>HireHub</h1>
+    <nav>
+      <a href="index.html">Find Jobs</a>
+      <a href="post-job.html" class="active">Post a Job</a>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h2>Post a New Job</h2>
+    <form id="jobForm">
+      <label>Company Name</label>
+      <input type="text" id="company" required />
+
+      <label>Job Title</label>
+      <input type="text" id="title" required />
+
+      <label>Location</label>
+      <input type="text" id="location" placeholder="e.g. Delhi, Remote" required />
+
+      <label>Category</label>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="IT">IT & Software</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Design">Design</option>
+        <option value="Finance">Finance</option>
+      </select>
+
+      <label>Job Type</label>
+      <select id="type" required>
+        <option value="">Select Job Type</option>
+        <option value="Full-Time">Full-Time</option>
+        <option value="Part-Time">Part-Time</option>
+        <option value="Internship">Internship</option>
+        <option value="Contract">Contract</option>
+      </select>
+
+      <label>Salary (optional)</label>
+      <input type="text" id="salary" placeholder="e.g. ₹5,00,000 per annum" />
+
+      <label>Job Description</label>
+      <textarea id="description" rows="4" required></textarea>
+
+      <button type="submit">Post Job</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 HireHub. Connecting Talent with Opportunity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
