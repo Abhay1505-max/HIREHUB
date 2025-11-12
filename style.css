@@ -1,3 +1,187 @@
+
+
+
+
+
+
+
+
+
+/*  */
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background: #f4faff;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: #0b132b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 6%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+header .logo h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #00a8cc;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00a8cc;
+}
+
+/* ---------- FORM CONTAINER ---------- */
+.form-container {
+  background: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #0b132b;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* ---------- FORM ELEMENTS ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00a8cc;
+  box-shadow: 0 0 6px rgba(0, 168, 204, 0.3);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00a8cc;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #008baa;
+  transform: translateY(-2px);
+}
+
+/* ---------- MESSAGE BOX ---------- */
+#message {
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+}
+
+#message.success {
+  color: #00a884;
+}
+
+#message.error {
+  color: #e74c3c;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: auto;
+  background: #0b132b;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+
+  .form-container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+
+/*  */
+
 /* ---------- GLOBAL ---------- */
 * {
   margin: 0;
@@ -325,3 +509,4 @@ footer {
     align-items: center;
   }
 }
+
