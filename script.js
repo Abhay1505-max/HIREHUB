@@ -130,3 +130,51 @@ if (currentUser) {
     logoutBtn.onclick = logoutUser;
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("jobForm");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const company = document.getElementById("company").value.trim();
+    const title = document.getElementById("title").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const category = document.getElementById("category").value;
+    const type = document.getElementById("type").value;
+    const salary = document.getElementById("salary").value.trim();
+    const description = document.getElementById("description").value.trim();
+    const messageBox = document.getElementById("message");
+
+    if (!company || !title || !location || !category || !type || !description) {
+      showMessage("Please fill all required fields.", "error");
+      return;
+    }
+
+    const job = {
+      company,
+      title,
+      location,
+      category,
+      type,
+      salary,
+      description,
+      postedOn: new Date().toLocaleString(),
+    };
+
+    const jobs = JSON.parse(localStorage.getItem("hirehub_jobs")) || [];
+    jobs.push(job);
+    localStorage.setItem("hirehub_jobs", JSON.stringify(jobs));
+
+    form.reset();
+    showMessage("Job posted successfully!", "success");
+  });
+
+  function showMessage(text, type) {
+    const message = document.getElementById("message");
+    message.textContent = text;
+    message.className = type;
+    message.style.display = "block";
+    setTimeout(() => (message.style.display = "none"), 3000);
+  }
+});
